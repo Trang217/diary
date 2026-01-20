@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import AddDiaryForm from './components/AddDiaryForm';
+import DiaryList from './components/DiaryList';
 import Tabs from './components/Tabs';
 
 function App() {
+    const [currentTab, setCurrentTab] = useState('diaries');
+
+    const handleTab = (selectedTab: string) => {
+        setCurrentTab(selectedTab);
+    };
     return (
         <>
             <div className="mx-auto flex w-160 flex-col py-4">
@@ -20,10 +27,16 @@ function App() {
                         </p>
                     </header>
                     {/* Tab */}
-                    <Tabs />
+                    <Tabs onSelectedTab={handleTab} />
 
                     {/* Form  */}
-                    <AddDiaryForm />
+                    <div className="flex flex-col gap-3 rounded-xl bg-amber-200 p-4">
+                        {currentTab === 'add' ? (
+                            <AddDiaryForm />
+                        ) : (
+                            <DiaryList />
+                        )}
+                    </div>
                 </div>
             </div>
         </>

@@ -1,10 +1,14 @@
 import { useState } from 'react';
 
-function Tabs() {
-    const [selectedTab, setSelectedTab] = useState('add');
+interface TabsProps {
+    onSelectedTab: (selectedTab: string) => void;
+}
+function Tabs({ onSelectedTab }: TabsProps) {
+    const [selectedTab, setSelectedTab] = useState('diaries');
 
     const handleToggleTab = (selectedTab: string) => {
         setSelectedTab(selectedTab);
+        onSelectedTab(selectedTab);
     };
     return (
         <>

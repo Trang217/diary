@@ -1,2 +1,6 @@
 @import 'tailwindcss';
 @plugin "daisyui";
+
+@theme {
+    --font-sans: 'Playfair Display', system-ui, sans-serif;
+}
