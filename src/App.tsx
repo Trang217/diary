@@ -36,17 +36,21 @@ function App() {
                         <label className="form-control w-full">
                             How are you feeling today?
                             <select id="emotions" className="select w-full">
-                                <option disabled={true}>Pick a color</option>
-                                <option>Crimson</option>
+                                <option selected>Happy</option>
                                 <option>Amber</option>
                                 <option>Velvet</option>
                             </select>
                         </label>
 
                         <textarea
-                            className="textarea"
-                            placeholder="Bio"
+                            className="textarea w-full"
+                            placeholder="Write your diary here"
+                            rows={20}
                         ></textarea>
+
+                        <button className="btn btn-primary">
+                            Save your diary
+                        </button>
                     </form>
                 </div>
             </div>
