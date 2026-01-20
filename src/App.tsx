@@ -1,3 +1,4 @@
+import AddDiaryForm from './components/AddDiaryForm';
 import Tabs from './components/Tabs';
 
 function App() {
@@ -22,36 +23,7 @@ function App() {
                     <Tabs />
 
                     {/* Form  */}
-
-                    <form className="flex flex-col gap-3">
-                        <label className="input w-full">
-                            Diary Title
-                            <input
-                                type="search"
-                                className="grow"
-                                placeholder="Give your diary a nice title"
-                            />
-                        </label>
-
-                        <label className="form-control w-full">
-                            How are you feeling today?
-                            <select id="emotions" className="select w-full">
-                                <option selected>Happy</option>
-                                <option>Amber</option>
-                                <option>Velvet</option>
-                            </select>
-                        </label>
-
-                        <textarea
-                            className="textarea w-full"
-                            placeholder="Write your diary here"
-                            rows={20}
-                        ></textarea>
-
-                        <button className="btn btn-primary">
-                            Save your diary
-                        </button>
-                    </form>
+                    <AddDiaryForm />
                 </div>
             </div>
         </>
