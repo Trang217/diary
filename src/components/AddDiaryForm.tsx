@@ -54,7 +54,7 @@ function AddDiaryForm() {
     };
 
     const openDialog = () => {
-        const modal = document.getElementById('success_modal').showModal();
+        const modal = document.getElementById('success_modal');
         if (modal instanceof HTMLDialogElement) {
             modal.showModal();
         }
